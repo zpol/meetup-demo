@@ -1,0 +1,81 @@
+version: '2'
+services:
+
+  db:
+    image: "mysql/mysql-server:5.6"
+    ports:
+      - "13306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=gogs
+      - MYSQL_USER=gogs
+      - MYSQL_PASSWORD=gogs
+      - MYSQL_ROOT_HOST=%
+    volumes:
+      - /tmp/mysql:/var/lib/mysql
+    restart: always
+    networks:
+      red:
+        aliases:
+          - db
+  gogs:
+    image: "gogs/gogs"
+    ports:
+      - "10022:22"
+      - "3000:3000"
+    depends_on:
+      - db
+    volumes:
+      - /tmp/gogs:/data
+    restart: always
+    networks:
+      red:
+        aliases:
+          - gogs
+
+  drone-server:
+    image: drone/drone:0.8
+    ports:
+      - 8000:8000
+    volumes:
+      - /tmp/drone:/var/lib/drone/
+    restart: always
+    depends_on:
+      - gogs
+    environment:
+      - DRONE_OPEN=true
+      - DRONE_GOGS=true
+      - DRONE_ADMIN=careto
+      - DRONE_HOST=http:://drone-server
+      - DRONE_GOGS_URL=http://gogs:3000
+      - DRONE_SECRET=12345678
+      - DRONE_GOGS_SECRET=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZXh0IjoiZ29ncy90ZXN0IiwidHlwZSI6Imhvb2sifQ.Q5jH9sLq1SKT2nLUinJt6k2kv25lk8ZPmL0KxpdJi5M
+    networks:
+      red:
+        aliases:
+          - drone-server
+
+
+  drone-agent:
+    image: drone/agent:0.8
+
+    restart: always
+    depends_on:
+      - drone-server
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - DRONE_SERVER=drone-server:9000
+      - DRONE_SECRET=12345678
+    networks:
+      red:
+        aliases:
+          - drone-agent
+
+networks:
+  red:
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16
+          gateway: 10.5.0.1
+
