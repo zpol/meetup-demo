@@ -64,7 +64,7 @@ If you want more, (resilience, fault tolerancy, hight availability and so on...)
 ----------------------------------
 
 
-##License
+## License
 
 
 
@@ -78,10 +78,10 @@ You should have received a copy of the Apache Software License along with this p
 
 The source code forked from other open source projects will inherit its license.
 
-##Privacy
+## Privacy
 This repository contains only non-sensitive, publicly available data and information. All material and community participation is covered by the Surveillance Platform Disclaimer and Code of Conduct. For more information about CDC's privacy policy, please visit http://www.cdc.gov/privacy.html.
 
-##Contributing
+## Contributing
 Anyone is encouraged to contribute to the repository by forking and submitting a pull request. (If you are new to GitHub, you might start with a basic tutorial.) By contributing to this project, you grant a world-wide, royalty-free, perpetual, irrevocable, non-exclusive, transferable license to all users under the terms of the Apache Software License v2 or later.
 
 All comments, messages, pull requests, and other submissions received through CDC including this GitHub page are subject to the Presidential Records Act and may be archived. Learn more at http://www.cdc.gov/other/privacy.html.
