@@ -60,7 +60,7 @@ __Remote developemnt environment:__ (i.e.: AWS, Google Cloud, Azure,...)
 There are several ways to deploy a production Continuous Delivery platform by using this demo: ECR; ECS, EC2, EKS,... 
 
 To simplify you can start by running an EC2 instance and install Docker Engine and Docker Compose.
-If you don't want to install it manually there's also a Launch configuration just ready to use [here]()
+If you don't want to install it manually there's also a Launch configuration just ready to use [here](https://github.com/zpol/meetup-demo/blob/master/examples/EC2_Launch_Configuration.txt)
 
 If you want more, (resilience, fault tolerancy, hight availability and so on...) the you should consider launch this stack in a more complex way.
 
