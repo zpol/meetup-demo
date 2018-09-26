@@ -3,6 +3,9 @@
 
 As was commented on the meetup presentation, this repository shows as an example how you can build your own Countinuous Delivery platform by using __[drone-server](https://github.com/drone/drone)__ and __[gogs](gogs.io)__ an alternative to Jenkins,spinnaker among others CI/CD platforms.  
 
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
 ---
 
 ## How it works 
@@ -50,6 +53,7 @@ __Remote developemnt environment:__ (i.e.: AWS, Google Cloud, Azure,...)
 There are several ways to deploy a production Continuous Delivery platform by using this demo: ECR; ECS, EC2, EKS,... 
 
 To simplify you can start by running an EC2 instance and install Docker Engine and Docker Compose.
+If you don't want to install it manually there's also a Launch configuration just ready to use [here]()
 
 If you want more, (resilience, fault tolerancy, hight availability and so on...) the you should consider launch this stack in a more complex way.
 
@@ -60,7 +64,7 @@ If you want more, (resilience, fault tolerancy, hight availability and so on...)
 ----------------------------------
 
 
-## License
+##License
 
 
 
@@ -74,10 +78,10 @@ You should have received a copy of the Apache Software License along with this p
 
 The source code forked from other open source projects will inherit its license.
 
-## Privacy
+##Privacy
 This repository contains only non-sensitive, publicly available data and information. All material and community participation is covered by the Surveillance Platform Disclaimer and Code of Conduct. For more information about CDC's privacy policy, please visit http://www.cdc.gov/privacy.html.
 
-## Contributing
+##Contributing
 Anyone is encouraged to contribute to the repository by forking and submitting a pull request. (If you are new to GitHub, you might start with a basic tutorial.) By contributing to this project, you grant a world-wide, royalty-free, perpetual, irrevocable, non-exclusive, transferable license to all users under the terms of the Apache Software License v2 or later.
 
 All comments, messages, pull requests, and other submissions received through CDC including this GitHub page are subject to the Presidential Records Act and may be archived. Learn more at http://www.cdc.gov/other/privacy.html.
