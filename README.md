@@ -4,7 +4,14 @@
 As was commented on the meetup presentation, this repository shows as an example how you can build your own Countinuous Delivery platform by using __[drone-server](https://github.com/drone/drone)__ and __[gogs](gogs.io)__ an alternative to Jenkins,spinnaker among others CI/CD platforms.  
 
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/zpol/meetup-demo/Captura de pantalla 2018-09-26 a las 13.47.39.png "Gogs")
+
+![alt text](https://github.com/zpol/meetup-demo/Captura de pantalla 2018-09-26 a las 13.48.18.png "Drone-server")
+
+![alt text](https://github.com/zpol/meetup-demo/Captura de pantalla 2018-09-26 a las 13.48.35.png "Drone-server")
+
+
+
 
 ---
 
