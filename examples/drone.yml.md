@@ -37,7 +37,8 @@ pipeline:
 ### Also we can validate and deploy entire stacks by using Cloud Formation:       
       
 
-```pipeline:
+```
+pipeline:
   validate-template:
     image: robertstettner/drone-cloudformation
     mode: validate
