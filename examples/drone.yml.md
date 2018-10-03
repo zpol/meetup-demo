@@ -7,7 +7,8 @@ Here you can find some example about how to confihure a pipeline with drone-serv
 and slack plugin to notify to a slack channel the build result: 
 
 
-```pipeline:
+```
+pipeline:
 
   scp:
     image: appleboy/drone-scp
